@@ -11,11 +11,12 @@ import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
 import retrofit2.http.Path;
+import retrofit2.http.QueryMap;
 
 
 public interface Link {
     //@FormUrlEncoded
-    @GET("/orgs/droidlabs/repos")
+    @GET("/api/v1.5/tr.json/translate")
     //Call<Object> Read(@FieldMap Map<String,String> map);
-    Call <List<Object>> Read (/*@FieldMap Map<String,String> map*/);
+    Call <Object> Read (@QueryMap Map<String,String> map);
 }
